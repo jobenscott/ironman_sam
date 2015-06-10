@@ -1,0 +1,48 @@
+<h4 class="postTitle">Recent Posts</h4>
+<div class="newPostButton">
+      <%= link_to "", new_post_path(current_user), class: "graybtn fa fa-pencil-square-o fa-lg"%>
+    </div>
+
+<% @unarchived_posts.each do |post| %>
+<div class="indexPostImage">           
+      <div class="imageIndex"><%= image_tag post.image.url(:thumb) %></div>
+</div>
+
+<div class="movingBoxIndex">
+
+<!-- <button href="#" id="summaryShow" class="optionButtons">test</button> -->
+      <br>
+      <span class="postTime">Post was made <%= time_ago_in_words(post.created_at) %> ago</span>
+
+      <%= link_to 'Show', show_path(post), class: "optionButtons" %> 
+      <!-- <button class="optionButtons">Show Summary</button> -->
+      <div class="optionButtons summaryShow">Subject</div>
+      <%#= if can? :update, post %>
+      <% if (current_user == @ray) || (current_user == @aaron) %>
+      <div class="optionsButton optionButtons">Options</div>
+      <div class="backFromOptions optionButtons">>></div>
+
+      <%= link_to 'Edit', edit_post_path(post.id), class: "optionsHidden optionButtons" %> 
+      <%= link_to 'Delete', post_path(post), method: :delete, class: "optionsHidden optionButtons" %>
+      <%= link_to "Archive", archive_path(post), class: "optionsHidden optionButtons"%>
+      <% else %>
+      poo
+      <% end %>
+      <!-- <div class="hiddenButtonTwo"></div> -->
+
+</div>
+<div class="showContentOnSlide"><%= post.subject %></div>
+<div class="indexPostBack optionButtons">Back</div>
+<hr class="shortHoverRow">
+<div class="hiddenButton"></div>
+<!-- <div class="hiddenButtonThree"></div> -->
+<br>
+<br>
+<% end %>
+
+<div class="postPagination"><%= will_paginate @posts %></div>
+
+        
+
+  
+       

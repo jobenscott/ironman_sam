@@ -1,0 +1,10 @@
+<%= bootstrap_form_for @post, :url => posts_path, :html => { :multipart => true } do |f| %>
+  
+    <%= f.text_field :subject %>
+
+    <%= f.text_area :content %>
+
+    <%= f.file_field :image, label: "Add Image"%>
+
+    <%= f.submit class: "btn btn-info" %>
+<% end %>

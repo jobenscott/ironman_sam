@@ -1,0 +1,12 @@
+<div id="thickNav">
+  <%= link_to "Home", root_path, class: "homeButton" %>
+  <%= link_to "About", static_pages_about_path, class: "aboutButton" %>
+</div>
+
+
+  <div class="showContent"><%= @post.content %></div>
+  <div class="imageShow"><%= image_tag @post.image.url %></div>
+  <%= link_to 'Edit', edit_post_path(@post) %> | 
+  <%= link_to 'Delete', post_path(@post), method: :delete %>
+
+<%= render 'footer' %>

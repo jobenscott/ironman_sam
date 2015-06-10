@@ -1,0 +1,642 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require rails_bootstrap_forms
+ *= require_tree .
+ *= require_self
+ */
+
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+@import 'font-awesome';
+
+body {
+  background-color: #FFFFF2;
+  // #FDFDFD
+}
+
+
+.longPic {
+  width: 100%;
+  height: 660px;
+
+}
+
+.longPicShow {
+  width: 100%;
+  height: 575px;
+
+}
+
+.image { 
+   position: relative; 
+   width: 100%; /* for IE 6 */
+}
+
+#thickNav {
+  width: 100%;
+  height: 47px;
+  // background: -webkit-linear-gradient(#C0C0C0, #808080); /* For Safari 5.1 to 6.0 */
+  // background: -o-linear-gradient(#C0C0C0, #808080); /* For Opera 11.1 to 12.0 */
+  // background: -moz-linear-gradient(#C0C0C0, #808080); /* For Firefox 3.6 to 15 */
+  // background: linear-gradient(#C0C0C0, #808080); /* Standard sy*/
+
+  background: -webkit-linear-gradient(#4B4947, #686461); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#4B4947, #686461); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#4B4947, #686461); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#4B4947, #686461);
+}
+
+.footerHome {
+  // position: absolute;
+  // bottom: 0px;
+  width: 100%;
+  height: 56px;
+  // background: -webkit-linear-gradient(#C0C0C0, #808080); /* For Safari 5.1 to 6.0 */
+  // background: -o-linear-gradient(#C0C0C0, #808080); /* For Opera 11.1 to 12.0 */
+  // background: -moz-linear-gradient(#C0C0C0, #808080); /* For Firefox 3.6 to 15 */
+  // background: linear-gradient(#C0C0C0, #808080); /* Standard sy*/
+
+  background: -webkit-linear-gradient(#686461, #4B4947); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#686461, #4B4947); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#686461, #4B4947); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#686461, #4B4947); /* Standard syntax */
+  border: none;
+  border-radius: 0px;
+
+}
+
+.navColor {
+  width: 100%;
+  height: 45px;
+  background: -webkit-linear-gradient(#C0C0C0, #808080); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#C0C0C0, #808080); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#C0C0C0, #808080); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#C0C0C0, #808080); /* Standard sy*/
+  border: none;
+  border-radius: 0px;
+
+}
+
+.navMargin {
+  margin: 0;
+}
+
+.homeButton { 
+  /*display: inline;*/
+  margin: 0;
+   position: absolute; 
+   padding-left: 40px;
+   top: 5px; 
+   left: 0;  
+   color: #FDFDFD;
+   font-size: 20px;
+   font-weight: bold;
+   text-decoration: none;
+   -webkit-transition: color 1s;
+    -moz-transition:    color 1s;
+    -ms-transition:     color 1s;
+    -o-transition:      color 1s;
+    transition:         color 1s;
+}
+
+.homeButton:hover { 
+  /*display: inline;*/
+  margin: 0;
+   position: absolute; 
+   padding-left: 40px;
+   top: 5px; 
+   left: 0;  
+   color: #ABABAB;
+   text-decoration: none;
+   font-size: 20px;
+   font-weight: bold;
+}
+
+.aboutButton { 
+  margin: 0;
+  /*display: inline;*/
+  position: absolute;
+  padding-right: 40px;
+  top: 5px; 
+  right: 0; 
+  color: #FDFDFD;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  -webkit-transition: color 1s;
+  -moz-transition:    color 1s;
+  -ms-transition:     color 1s;
+  -o-transition:      color 1s;
+  transition:         color 1s;
+}
+
+.aboutButton:hover { 
+  margin: 0;
+  /*display: inline;*/
+   position: absolute; 
+   padding-right: 40px;
+   top: 5px; 
+   right: 0; 
+   color: #ABABAB;
+   text-decoration: none;
+   font-size: 20px;
+   font-weight: bold;
+}
+
+
+
+.aboutTitle {
+  text-align: center;
+  font-weight: bold;
+  color: #292921;
+}
+
+.postTime {
+  font-size: 13px; 
+  font-family: century;
+  margin-top: 10px;
+  padding-left: 4px;
+  padding-right: 56px;
+}
+
+.postPagination {
+  position: absolute;
+  bottom: 20px;
+  margin-left: 224px;
+  color: #93A4AD;
+  text-decoration: none;
+  font-family: century;
+  -webkit-transition: color 1s;
+  -moz-transition:    color 1s;
+  -ms-transition:     color 1s;
+  -o-transition:      color 1s;
+  transition:         color 1s;
+}
+
+
+
+.postPagination:hover {
+  color: #485861;
+  text-decoration: none;
+
+}
+
+.will_paginate:hover {
+  text-decoration: none;
+}
+
+.postSubject {
+  // font-size: 28px;
+  font-family: century; 
+  margin-bottom: 10px;
+  max-width: 40%;
+}
+
+.aPostSubject {
+  font-size: 13px;
+  font-family: century; 
+  max-width: 80%;
+  padding-left: 7px;
+  margin-left: 25px;
+  top: 20%;
+}
+
+.graybtn {
+  position: absolute;
+  top: 20px;
+  left: 80px;
+  color: #2E2E30;
+  text-decoration: none;
+  padding-top: 8px;
+  padding-left: 4px;
+  -webkit-transition: color 1s;
+    -moz-transition:    color 1s;
+    -ms-transition:     color 1s;
+    -o-transition:      color 1s;
+    transition:         color 1s;
+}
+
+.archivedHeadingOne {
+  text-align: center;
+  font-weight: bold;
+}
+
+.archivedTimeDisplayedOne {
+  text-align: center;
+  display: none;
+}
+
+.archivedHeadingTwo {
+  text-align: center;
+  font-weight: bold;
+}
+
+.archivedTimeDisplayedTwo {
+  text-align: center;
+  display: none;
+}
+
+.archivedHeadingThree {
+  text-align: center;
+  font-weight: bold;
+}
+
+.archivedTimeDisplayedThree {
+  text-align: center;
+  display: none;
+}
+
+.archivedHeadingFour {
+  text-align: center;
+  font-weight: bold;
+}
+
+.archivedTimeDisplayedFour {
+  text-align: center;
+  display: none;
+  max-width: 250px;
+  margin: auto;
+  margin-top: 15px;
+  border: 1.5px solid #5D5B59;
+  border-radius: 0px;
+}
+
+.archivedHeadingFive {
+  text-align: center;
+  font-weight: bold;
+}
+
+.archivedTimeDisplayedFive {
+  text-align: center;
+  display: none;
+}
+
+.archivedHeadingSix {
+  text-align: center;
+  font-weight: bold;
+}
+
+.archivedTimeDisplayedSix {
+  text-align: center;
+  display: none;
+}
+
+
+.archivedImageBorder {
+  max-width: 100px;
+  min-width: 100px; 
+  min-height: 100px;
+  max-height: 100px;
+  margin: auto;
+  border: solid #4B4947 2px;
+  display: none; 
+}
+
+.archivedImageOne {
+  display: none;
+  max-width: 100px;
+  margin: auto;
+}
+
+.archivedImageTwo {
+  display: none;
+  max-width: 100px;
+  margin: auto;
+}
+
+.archivedImageThree {
+  display: none;
+  max-width: 100px;
+  margin: auto;
+}
+
+.archivedImageFour {
+  display: none;
+  max-width: 106px;
+  margin: auto;
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+
+.archivedImageFive {
+  display: none;
+  max-width: 100px;
+  margin: auto;
+}
+
+.archivedImageSix {
+  display: none;
+  max-width: 100px;
+  margin: auto;
+}
+
+.archivedHiddenSubject {
+  // display: none;
+  opacity: 0;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  max-width: 100px;
+  margin: auto;
+  max-height: 100px;
+  min-height: 0px;
+  height: 0px;
+  
+  // -webkit-transition: color 1s;
+  //   -moz-transition:    color 1s;
+  //   -ms-transition:     color 1s;
+  //   -o-transition:      color 1s;
+  //   transition:         color 1s;
+
+}
+
+.archivedSubjectColor {
+  color: #5D5B59;
+  text-decoration: none;
+  -webkit-transition: color 1s;
+    -moz-transition:    color 1s;
+    -ms-transition:     color 1s;
+    -o-transition:      color 1s;
+    transition:         color 1s;
+}
+
+.archivedSubjectColor:hover {
+  color: #A8A6A6;
+  text-decoration: none;
+}
+
+
+nav {
+  height: 35px;
+}
+
+.graybtn:hover {
+  text-decoration: none;
+  color: #EAEAEA;
+}
+
+.newPostButton {
+  padding-top: 8px;
+  text-decoration: none;
+}
+
+.summaryShow {
+  border: none;
+  background-color: none;
+}
+
+.optionsButton {
+
+}
+
+.optionsHidden {
+  display: none;
+}
+
+.indexPostBack {
+  display: none;
+}
+
+.backFromOptions {
+  display: none;
+}
+
+.showContentOnSlide {
+  display: none;
+}
+
+.movingBoxIndex {
+  // width: 100%;
+}
+
+.aboutContent {
+  text-align: center;
+  background-color: #BBBBBB;
+}
+
+.postContent {
+  padding-left: 175px;
+  font-family: century;
+  margin: 0;
+  display: inline-block;
+  background-color: #A9A5A1;
+  // background-color: #948F8A;
+  // background-color: #545454;
+  // background-color: #D3D3D3;
+  min-height: 600px;
+}
+
+.rightArchived {
+  margin-bottom: 50px;
+  padding: 0px;
+  overflow-y: auto;
+  max-height: 600px;
+  min-width: 319px;
+  text-align: center;
+}
+
+
+div.row {
+  max-width: 1276px;
+  margin: 0px;
+}
+
+.archivedTitle {
+  left: 0px;
+  right: 0px;
+  color: #3C3A39;
+  font-family: century;
+  font-weight: bold;
+  padding-top: 15px;
+}
+
+.postTitle {
+  text-align: center;
+  margin-right: 108px;
+  font-weight: bold;
+  padding-top: 15px;
+  padding-bottom: 40px;
+  color: #3C3A39;
+}
+
+
+.showContent {
+  padding-left: 55px;
+  font-family: century;
+  font-size: 20px;
+  width: 60%;
+}
+
+.bigSubject {
+  font-size: 35px;
+  font-weight: bold;
+  font-family: century;
+  position: absolute; 
+   padding-left: 50px;
+   padding-top: 180px;
+   top: 100px; 
+   left: 0;  
+   color: #FDFDFD;
+   max-width: 400px;
+  
+}
+
+.postTimeBig {
+  font-size: 18px;
+  font-family: century;
+  position: absolute; 
+   padding-left: 75px;
+   padding-top: 320px;
+   top: 100px; 
+   left: 0;  
+   color: #FDFDFD;
+   max-width: 500px;
+}
+
+.shortHoverRow {
+  width: 100%;
+  left: 0;
+  margin-left: 0;
+  margin-top: 20px;
+}
+
+.hiddenButton {
+  display: inline;
+  opacity: 1;
+  // height: 0px;
+  // width: 1px;
+}
+
+.hiddenButtonTwo {
+  display: none;
+}
+
+.indexPostImage {
+  padding-bottom: 20px;
+  padding-left: 20px;
+}
+
+.imageIndex {
+  margin-left: 40px;
+  position: absolute;
+  left: 0;
+  margin-bottom: 20px;
+  border: solid #4B4947 2px;
+
+}
+
+
+.imageShow {
+  position: absolute;
+  right: 245px;
+  top: 150px;
+}
+
+.optionButtons {
+  font-size: 14px;
+  // color: #93A4AD;
+  // color: #6D7981;
+  color: #485861;
+  text-decoration: none;
+  font-family: century;
+  float: right;
+  padding-left: 20px;
+  padding-right: 7px;
+  -webkit-transition: color 1s;
+  -moz-transition:    color 1s;
+  -ms-transition:     color 1s;
+  -o-transition:      color 1s;
+  transition:         color 1s;
+}
+
+
+
+.optionButtons:hover {
+  font-size: 14px;
+  color: #FFFFF2;
+  // color: #485861;
+  text-decoration: none;
+  float: right;
+}
+
+.option2Buttons {
+  font-size: 11px;
+  color: #93A4AD;
+  text-decoration: none;
+  font-family: century;
+  padding-left: 27px;
+  -webkit-transition: color 1s;
+  -moz-transition:    color 1s;
+  -ms-transition:     color 1s;
+  -o-transition:      color 1s;
+  transition:         color 1s;
+}
+
+.option2Buttons:hover {
+  font-size: 11px;
+  color: #485861;
+  text-decoration: none;
+}
+
+.blackBorderMidLevel {
+  width: 100%;
+  height: 30px;
+  background-color: #292921;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+}
+
+div.carousel {
+
+  display: inline-block;
+}
+
+#rightCarousel {
+  position: absolute;
+  margin: right;
+}
+
+.carousel {
+    height: 500px;
+    margin-bottom: 0px;
+    border: 1px solid black;
+    width: 50%;
+    margin: left;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+    z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+    width: 100%;
+    height: 498px;
+    background-color: #777;
+
+}
+.carousel-inner > .item > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 500px;
+}
+
+@media (min-width: 568px) {
+    .carousel-caption p {
+            margin-bottom: 0px;
+            font-size: 21px;
+            line-height: 1.4;
+    }
+}

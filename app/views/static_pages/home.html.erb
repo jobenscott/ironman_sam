@@ -1,0 +1,128 @@
+
+
+<!-- <img class="samImg" src="https://scontent-2.22773.fna.fbcdn.net/hphotos-xpf1/v/t1.0-9/10421544_789387584488637_4486000990999813625_n.jpg?oh=0e388cdb3a389972f54bdaa302c559df&oe=55D6ED54"> -->
+<!-- https://scontent-2.22773.fna.fbcdn.net/hphotos-xat1/v/t1.0-9/11133731_817349385025790_7449332300754068800_n.jpg?oh=eb572afc7ffdbbb29f800d9a61c828fe&oe=55C2B227 -->
+
+
+<div class="image">
+  <!-- <img class="longPic" src="http://imgprix.com/web/wallpapers/colorful-sky-ocean/1920x1080.jpg"> -->
+  </div>
+
+  <!-- <div class="carousel">
+
+  </div>
+  <div id="rightCarousel" class="carousel">
+
+  </div> -->
+  <div id="thickNav">
+  <%= link_to "Home", root_path, class: "homeButton" %>
+  <%= link_to "About", static_pages_about_path, class: "aboutButton" %>
+
+</div>
+<%= link_to "Sign Up", new_user_path %>
+<%= link_to "Sign In", new_user_session_path %>
+<%= link_to "Sign Out", destroy_user_session_path, :method => :delete %>
+
+
+
+
+<div class="row">        
+
+
+  <div class="col-md-9 postContent">
+    <%= render 'posts/index' %>  
+  </div>
+
+  
+  <div class="col-md-3 rightArchived">
+    <h4 class="archivedTitle">Archived Posts</h4>
+        <div class="archivedHeadingOne">Today</div>
+        <div class="archivedTimeDisplayedOne">  
+          <% @archived_posts.each do |apost| %> 
+            <% if apost.created_at == Date.today && apost.content.length > 45 %>
+              <div>too long</div>
+            <% elsif apost.created_at == Date.today %>
+              <p>Post was made <%= time_ago_in_words(apost.created_at) %> ago</p>
+              <div class="archivedImageOne"><%= link_to image_tag(apost.image.url(:thumb)), show_path(apost) %></div>
+              <div class="archivedHiddenSubject"><%= apost.subject %></div>
+            <% end %>
+          <% end %>
+        </div>
+       
+        <div class="archivedHeadingTwo">Yesterday</div>
+        <div class="archivedTimeDisplayedTwo">
+          <% @archived_posts.each do |apost| %>
+            <% if apost.created_at == 1.day.ago && apost.content.length > 45 %>
+              <div>too long</div>
+            <% elsif apost.created_at == 1.day.ago %>
+              <p>Post was made <%= time_ago_in_words(apost.created_at) %> ago</p>
+              <div class="archivedImageTwo"><%= link_to image_tag(apost.image.url(:thumb)), show_path(apost) %></div>
+              <div class="archivedHiddenSubject"><%= apost.subject %></div>
+            <% end %>
+          <% end %>
+        </div>
+        
+        <div class="archivedHeadingThree">1 Week Ago</div>
+        <div class="archivedTimeDisplayedThree">
+          <% @archived_posts.each do |apost| %>
+            <% if apost.created_at >= 1.week.ago && apost.created_at < 1.day.ago && apost.content.length > 45 %>
+              <div>too long</div>
+            <% elsif apost.created_at >= 1.week.ago && apost.created_at < 1.day.ago %>
+              <p>Post was made <%= time_ago_in_words(apost.created_at) %> ago</p>
+              <div class="archivedImageThree"><%= link_to image_tag(apost.image.url(:thumb)), show_path(apost) %></div>
+              <div class="archivedHiddenSubject"><%= apost.subject %></div>
+            <% end %>
+          <% end %>
+        </div>
+        
+        <div class="archivedHeadingFour">2 Weeks Ago</div>
+        
+          <% @archived_posts.each do |apost| %>
+          
+            <% if apost.created_at >= 2.week.ago && apost.created_at < 1.week.ago && apost.content.length > 45 %>
+              <div>too long</div>
+            <% elsif apost.created_at >= 2.week.ago && apost.created_at < 1.week.ago %>
+            <div class="archivedTimeDisplayedFour panel panel-md">
+              <p class="archivedTimeCounter">Post was made <%= time_ago_in_words(apost.created_at) %> ago</p>
+              <div class="archivedImageFour"><%= image_tag apost.image.url(:thumb) %></div>
+              <div class="archivedHiddenSubject"><%= link_to apost.subject, show_path(apost), class: "archivedSubjectColor" %></div>
+              </div>
+            <% end %>           
+          <% end %>
+        
+                
+        <div class="archivedHeadingFive">3 Weeks Ago</div>
+        <div class="archivedTimeDisplayedFive">
+          <% @archived_posts.each do |apost| %>
+            <% if apost.created_at >= 3.week.ago && apost.created_at < 2.week.ago && apost.content.length > 45 %>
+              <div>too long</div>
+            <% elsif apost.created_at >= 3.week.ago && apost.created_at < 2.week.ago %>
+              <p>Post was made <%= time_ago_in_words(apost.created_at) %> ago</p>
+              <div class="archivedImageFive"><%= link_to image_tag(apost.image.url(:thumb)), show_path(apost) %></div>
+                <div class="archivedHiddenSubject"><%= apost.subject %></div>
+            <% end %>
+          <% end %>
+          </div>
+        
+               
+        <div class="archivedHeadingSix">1 Month Ago</div>
+        <div class="archivedTimeDisplayedSix">
+          <% @archived_posts.each do |apost| %>
+            <% if apost.created_at >= 1.month.ago && apost.created_at < 3.week.ago && apost.content.length > 45 %> 
+            <% elsif apost.created_at >= 1.month.ago && apost.created_at < 3.week.ago %>
+              <p>Post was made <%= time_ago_in_words(apost.created_at) %> ago</p>
+              <div class="archivedImageSix"><%= link_to image_tag(apost.image.url(:thumb)), show_path(apost) %></div>
+              <div class="archivedHiddenSubject"><%= apost.subject %></div>
+            <% end %>
+          <% end %>
+        </div>
+
+  </div>
+
+
+</div>
+
+<%= render 'footer' %>
+
+     
+ 

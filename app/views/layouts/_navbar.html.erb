@@ -1,0 +1,16 @@
+<nav class="navbar navbar-default navColor navMargin">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <div class="newPostButton">
+          <%= link_to "", new_post_path, class: "graybtn fa fa-pencil-square-o"%>
+        </div>
+    </div>
+  </div>
+</nav>
+<div class="image">
+  <img class="longPicShow" src="http://imgprix.com/web/wallpapers/colorful-sky-ocean/1920x1080.jpg">
+  <%= link_to "Home", root_path, class: "homeButton" %>
+  <%= link_to "About", static_pages_about_path, class: "aboutButton" %>
+  <h3 class="bigSubject"><%= @post.subject %></h3>
+  <br>
+</div>
