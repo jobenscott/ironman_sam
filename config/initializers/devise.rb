@@ -79,6 +79,9 @@ Devise.setup do |config|
   # passing skip: :sessions to `devise_for` in your config/routes.rb
   config.skip_session_storage = [:http_auth]
 
+
+  config.secret_key = 'a60a5857c8e84fabc1e1dfcc77db3e9807ffc847b2ff3ea2a7c2b4dee0f43753c12912f7cc3eef772c1c14b48a5b16532b042f228f76113de72690dfcf508a30'
+
   # By default, Devise cleans up the CSRF token on authentication to
   # avoid CSRF token fixation attacks. This means that, when using AJAX
   # requests for sign in and sign up, you need to get a new CSRF token
