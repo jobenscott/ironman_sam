@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+
 # CanCanCan gem
 gem 'cancancan', '~> 1.10'
 # Rolify gem
